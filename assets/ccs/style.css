@@ -79,7 +79,7 @@ nav a:hover \{\
 /* --- \uc0\u39318 \u39029 \u22823 \u22270  (Hero Section) --- */\
 .hero \{\
     /* \uc0\u37325 \u28857 \u65306 \u36825 \u37324 \u30340 \u36335 \u24452  ../images/ \u34920 \u31034 \u22238 \u21040 \u19978 \u19968 \u32423 \u25214 \u21040  images \u25991 \u20214 \u22841  */\
-    background: linear-gradient(rgba(0,30,60,0.7), rgba(0,30,60,0.7)), url('../images/banner.jpg');\
+    background: linear-gradient(rgba(0,30,60,0.7), rgba(0,30,60,0.7)), url('../images/banner1.jpg');\
     background-size: cover;\
     background-position: center;\
     height: 500px;\
