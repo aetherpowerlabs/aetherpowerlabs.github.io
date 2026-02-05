@@ -1,0 +1,14 @@
+title: AetherPower Labs | Premier AI Glasses & Energy Storage Manufacturer
+email: info@aetherpowerlabs.com
+description: >- # 这里的描述会被 Google 抓取显示
+  Professional B2B manufacturer specializing in AI Smart Glasses, High-capacity Power Banks, and Industrial Energy Storage Systems. 
+  OEM/ODM services available for global markets.
+baseurl: "" 
+url: "https://aetherpowerlabs.com" 
+twitter_username: aetherpowerlabs
+github_username:  aetherpowerlabs
+
+# 启用 SEO 插件
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
