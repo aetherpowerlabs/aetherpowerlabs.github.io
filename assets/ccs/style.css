@@ -1,169 +1,89 @@
-/* --- Global Reset & Luxury Theme --- */
-:root {
-    --primary-blue: #0071e3;
-    --accent-cyan: #05acff;
-    --bg-deep: #000000;
-    --card-bg: #121212;
-    --text-main: #f5f5f7;
-    --text-dim: #86868b;
-    --glass: rgba(0, 0, 0, 0.75);
-}
-
+/* --- 基础设置 --- */
 * { box-sizing: border-box; }
 
 body {
-    background-color: var(--bg-deep);
-    color: var(--text-main);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #000000 !important; /* 强制背景变黑 */
+    color: #ffffff;
+    font-family: -apple-system, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* --- Logo & Navigation --- */
+/* --- 导航栏 --- */
 .site-header {
-    background: var(--glass);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.9);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid #333;
 }
 
 .site-header .container {
     display: flex;
     justify-content: space-between;
+    height: 60px;
     align-items: center;
-    height: 64px;
 }
 
-.logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
-.logo-aether { color: var(--text-main); }
-.logo-power { color: var(--primary-blue); }
-.logo-labs { color: var(--text-dim); font-weight: 300; margin-left: 2px; }
+.logo { font-size: 22px; font-weight: bold; }
+.logo span { color: #0071e3; }
 
 .btn-contact {
-    background: white;
-    color: black;
-    padding: 8px 18px;
+    background: #0071e3;
+    color: white;
+    padding: 8px 16px;
     border-radius: 20px;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    transition: 0.3s ease;
+    font-size: 14px;
 }
 
-.btn-contact:hover { background: var(--primary-blue); color: white; }
-
-/* --- Hero Section (Banner) --- */
+/* --- Banner (Hero) --- */
 .hero {
-    height: 90vh;
-    min-height: 600px;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)), 
-                url('../images/banner.jpg') center/cover no-repeat;
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('../images/banner.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 64px;
+    padding-top: 60px;
 }
 
-.hero-badge {
-    color: var(--accent-cyan);
-    font-size: 12px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-bottom: 16px;
-}
-
-.hero h1 {
-    font-size: clamp(32px, 8vw, 64px);
-    font-weight: 700;
-    margin: 0 0 24px;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-}
-
-.hero p {
-    font-size: clamp(18px, 2vw, 22px);
-    color: var(--text-dim);
-    max-width: 700px;
-    margin: 0 auto 40px;
-}
+.hero-badge { color: #0071e3; letter-spacing: 2px; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; }
+.hero h1 { font-size: clamp(32px, 8vw, 56px); margin: 10px 0; font-weight: bold; }
+.hero p { color: #888; font-size: 18px; max-width: 600px; margin: 0 auto 30px; }
 
 .btn-primary {
-    background: var(--primary-blue);
-    color: white;
-    padding: 16px 36px;
+    background: white;
+    color: black;
+    padding: 15px 30px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
-    transition: 0.4s cubic-bezier(0.2, 1, 0.3, 1);
-    display: inline-block;
+    font-weight: bold;
 }
 
-.btn-primary:hover { transform: scale(1.05); box-shadow: 0 0 25px rgba(0,113,227,0.4); }
-
-/* --- Product Grid --- */
-.products-section { padding: 120px 0; }
-.section-title { text-align: center; font-size: 36px; font-weight: 700; margin-bottom: 60px; }
+/* --- 产品展示 --- */
+.products-section { padding: 80px 0; }
+.section-title { text-align: center; font-size: 32px; margin-bottom: 50px; }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .product-card {
-    background: var(--card-bg);
-    border-radius: 28px;
-    padding: 40px;
-    border: 1px solid rgba(255,255,255,0.04);
-    transition: 0.5s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-12px);
-    border-color: rgba(0,113,227,0.4);
-    background: #1a1a1c;
-}
-
-.card-img-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 10;
-    overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 28px;
-}
-
-.product-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: 0.8s ease;
-}
-
-.product-card:hover img { transform: scale(1.08); }
-
-.product-card h3 { font-size: 24px; margin: 0 0 12px; }
-.product-card p { color: var(--text-dim); font-size: 16px; margin: 0; }
-
-/* --- Footer --- */
-footer {
-    padding: 80px 0 40px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    background: #111;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid #222;
     text-align: center;
-    color: var(--text-dim);
 }
 
-/* --- Mobile Fix --- */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 38px; }
-    .product-grid { grid-template-columns: 1fr; }
-}
+.product-card img { width: 100%; border-radius: 10px; margin-bottom: 20px; height: auto; }
+.product-card h3 { margin: 10px 0; }
+.product-card p { color: #888; font-size: 14px; }
+
+footer { padding: 40px 0; text-align: center; border-top: 1px solid #222; color: #444; }
