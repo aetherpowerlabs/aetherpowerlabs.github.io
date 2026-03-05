@@ -3,54 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aether Power Labs | Advanced AI & Energy Solutions</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body style="background-color: #000; margin: 0;">
+    <title>Aether Power Labs | Leading AI & Energy Solutions</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: #000000 !important; 
+            color: #ffffff !important; 
+            font-family: -apple-system, system-ui, sans-serif;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        header { 
+            background: rgba(0,0,0,0.9); 
+            height: 70px; 
+            display: flex; 
+            align-items: center; 
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 24px; font-weight: bold; }
+        .logo span { color: #0071e3; }
+        
+        .hero { 
+            height: 80vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('assets/images/banner1.jpg') center/cover no-repeat;
+        }
+        .hero h1 { font-size: clamp(40px, 8vw, 64px); margin-bottom: 20px; }
+        .hero p { color: #888; font-size: 20px; max-width: 700px; margin-bottom: 30px; }
+        .btn-primary { background: #fff; color: #000; padding: 15px 35px; border-radius: 30px; text-decoration: none; font-weight: bold; }
 
-    <header class="site-header">
-        <div class="container">
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px; 
+            padding: 80px 0; 
+        }
+        .product-card { 
+            background: #111; 
+            padding: 30px; 
+            border-radius: 20px; 
+            border: 1px solid #222; 
+            text-align: center;
+        }
+        .product-card img { width: 100%; border-radius: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; width: 100%;">
             <div class="logo">Aether<span>Power</span> Labs</div>
-            <nav><a href="mailto:contact@aetherpowerlabs.com" class="btn-contact">Contact Us</a></nav>
+            <a href="mailto:contact@aetherpowerlabs.com" style="color: #0071e3; text-decoration: none; font-weight: bold;">Contact</a>
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge">Innovation 2026</div>
-            <h1>Empowering the Next <br>Generation of Intelligence</h1>
-            <p>Your strategic OEM/ODM partner for advanced AI optics and energy storage systems.</p>
-            <a href="#products" class="btn-primary">View Solutions</a>
-        </div>
+        <div class="hero-badge" style="color: #0071e3; letter-spacing: 2px; margin-bottom: 10px;">INNOVATION 2026</div>
+        <h1>Next-Gen AI Vision</h1>
+        <p>Advanced OEM/ODM partner for AI optics and energy storage systems.</p>
+        <a href="#products" class="btn-primary">View Solutions</a>
     </section>
 
-    <section id="products" class="products-section">
-        <div class="container">
-            <h2 class="section-title">Core Technologies</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="assets/images/ai-glasses.jpg" alt="AI Glasses">
-                    <h3>Smart Vision Pro</h3>
-                    <p>Advanced AR waveguide technology with real-time AI recognition.</p>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/battery-storage.jpg" alt="Energy Storage">
-                    <h3>Industrial ESS</h3>
-                    <p>High-density energy storage solutions for enterprise resilience.</p>
-                </div>
-                <div class="product-card">
-                    <img src="assets/images/power-bank.jpg" alt="Portable Power">
-                    <h3>Pro Portable Power</h3>
-                    <p>Next-gen fast-charging mobile power stations.</p>
-                </div>
+    <div class="container">
+        <div id="products" class="product-grid">
+            <div class="product-card">
+                <img src="assets/images/ai-glasses.jpg" alt="AI Glasses">
+                <h3>Smart Vision Pro</h3>
+                <p>AI-driven AR waveguide technology.</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/battery-storage.jpg" alt="Battery">
+                <h3>Industrial ESS</h3>
+                <p>High-density energy storage solutions.</p>
+            </div>
+            <div class="product-card">
+                <img src="assets/images/power-bank.jpg" alt="Power Bank">
+                <h3>Pro Power Station</h3>
+                <p>Fast-charging mobile energy stations.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Aether Power Labs. All rights reserved.</p>
-        </div>
+    <footer style="padding: 50px 0; text-align: center; color: #444; border-top: 1px solid #222;">
+        <p>&copy; 2026 Aether Power Labs</p>
     </footer>
 
 </body>
