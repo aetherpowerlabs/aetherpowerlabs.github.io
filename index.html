@@ -3,38 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aether Power Labs | Precision AI Optics & Energy Solutions</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Aether Power Labs | Next-Gen AI Vision</title>
     <style>
-        html { scroll-behavior: smooth; }
-        body { background-color: #000; color: #fff; margin: 0; font-family: -apple-system, sans-serif; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        
-        /* 导航栏 */
-        header { 
-            background: rgba(0, 0, 0, 0.9); 
-            backdrop-filter: blur(20px); 
-            height: 70px; 
-            border-bottom: 1px solid #1c1c1e; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
+        /* --- 核心“WOW”样式回归 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+            line-height: 1.5;
         }
-        .header-flex { display: flex; justify-content: space-between; align-items: center; height: 100%; }
-        
-        /* Logo 链接样式 */
-        .logo-link { text-decoration: none; color: #fff; transition: opacity 0.2s; }
-        .logo-link:hover { opacity: 0.8; }
-        .logo { font-size: 24px; font-weight: 700; }
-        .logo span { color: #0071e3; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
 
-        /* 产品详情跳转链接 */
-        .product-link { text-decoration: none; color: inherit; display: block; }
-        .product-link:hover .img-wrapper img { transform: scale(1.05); }
-        .product-link:hover h3 { color: #0071e3; }
+        /* 导航栏：简洁透明 */
+        header {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         
-        .img-wrapper { overflow: hidden; border-radius: 12px; margin-bottom: 20px; transition: 0.4s; }
-        .img-wrapper img { transition: 0.5s ease; width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .logo-link { text-decoration: none; color: #fff; font-size: 24px; font-weight: 700; }
+        .logo span { color: #0071e3; }
+        
+        .btn-contact { 
+            color: #0071e3; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: 0.3s;
+        }
+        .btn-contact:hover { opacity: 0.7; }
+
+        /* Hero：极致酷黑布局 */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #111 0%, #000 100%);
+        }
+        .hero-badge {
+            color: #0071e3;
+            letter-spacing: 2px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: clamp(48px, 10vw, 84px);
+            font-weight: 700;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            color: #86868b;
+            font-size: 20px;
+            max-width: 650px;
+            margin-bottom: 40px;
+        }
+
+        /* 那个最酷的白色按钮 */
+        .btn-primary {
+            background: #ffffff;
+            color: #000000;
+            padding: 18px 45px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .btn-primary:hover { transform: scale(1.05); background: #f5f5f7; }
+
+        /* 产品网格：保持整洁 */
+        .product-section { padding: 100px 0; }
+        .section-title { font-size: 32px; text-align: center; margin-bottom: 60px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
+        
+        .product-link { text-decoration: none; color: inherit; display: block; }
+        .product-card {
+            background: #000;
+            transition: 0.4s;
+        }
+        .img-wrapper { 
+            width: 100%; 
+            aspect-ratio: 16/9; 
+            background: #1c1c1e; 
+            border-radius: 20px; 
+            overflow: hidden; 
+            margin-bottom: 25px;
+            border: 1px solid #222;
+        }
+        .img-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .product-card:hover img { transform: scale(1.05); }
+        .product-card h3 { font-size: 24px; margin-bottom: 12px; }
+        .product-card p { color: #86868b; font-size: 16px; line-height: 1.5; }
+
+        footer { padding: 60px 0; text-align: center; color: #444; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
@@ -44,84 +117,54 @@
             <a href="index.html" class="logo-link">
                 <div class="logo">Aether<span>Power</span> Labs</div>
             </a>
-            <nav>
-                <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Contact Sales</a>
-            </nav>
+            <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Contact</a>
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-badge">Next-Gen OEM/ODM Partner</div>
-        <h1>Empowering Global <br>Intelligence Systems</h1>
-        <p>Strategic partner for high-precision diffraction waveguides and industrial-grade energy management systems.</p>
-        <div class="hero-actions">
-            <a href="#products" class="btn-primary">View Solutions</a>
-            <a href="mailto:demi@aetherpowerlabs.com" class="btn-secondary">Get a Quote</a>
-        </div>
+        <div class="hero-badge">Innovation 2026</div>
+        <h1>Next-Gen AI Vision</h1>
+        <p>Advanced OEM/ODM partner for AI optics and energy storage systems.</p>
+        <a href="#products" class="btn-primary">View Solutions</a>
     </section>
 
-    <section id="products" class="products-section">
+    <section id="products" class="product-section">
         <div class="container">
             <h2 class="section-title">Core Technology Portfolios</h2>
             <div class="product-grid">
                 
                 <div class="product-card">
                     <a href="ai-glasses-detail.html" class="product-link">
-                        <div class="img-wrapper">
-                            <img src="assets/images/ai-glasses.jpg" alt="AI Glasses">
-                        </div>
+                        <div class="img-wrapper"><img src="assets/images/ai-glasses.jpg" alt="AI Glasses"></div>
                         <h3>Smart Vision Pro</h3>
-                        <p>Proprietary waveguide technology with integrated AI spatial computing. Optimized for enterprise AR applications.</p>
+                        <p>Proprietary waveguide technology with integrated AI spatial computing. Optimized for enterprise AR.</p>
                     </a>
                 </div>
 
                 <div class="product-card">
                     <a href="battery-storage-detail.html" class="product-link">
-                        <div class="img-wrapper">
-                            <img src="assets/images/battery-storage.jpg" alt="Energy Storage">
-                        </div>
+                        <div class="img-wrapper"><img src="assets/images/battery-storage.jpg" alt="Energy Storage"></div>
                         <h3>Industrial ESS</h3>
-                        <p>Modular energy storage systems (ESS) featuring high-density cells for industrial-scale power resilience.</p>
+                        <p>Modular LFP energy storage systems designed for industrial-scale resilience and power management.</p>
                     </a>
                 </div>
 
                 <div class="product-card">
                     <a href="power-bank-detail.html" class="product-link">
-                        <div class="img-wrapper">
-                            <img src="assets/images/power-bank.jpg" alt="Power Bank">
-                        </div>
+                        <div class="img-wrapper"><img src="assets/images/power-bank.jpg" alt="Power Station"></div>
                         <h3>Pro Power Station</h3>
-                        <p>Military-grade portable power with GaN fast-charging technology for high-performance mobile computing.</p>
+                        <p>Military-grade portable power with GaN technology for high-performance mobile computing.</p>
                     </a>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <section class="values-section">
-        <div class="container">
-            <div class="values-grid">
-                <div class="value-item">
-                    <h4>Precision</h4>
-                    <p>Micron-level accuracy in optical manufacturing and rigorous testing.</p>
-                </div>
-                <div class="value-item">
-                    <h4>Speed</h4>
-                    <p>Agile supply chain management to accelerate your time-to-market.</p>
-                </div>
-                <div class="value-item">
-                    <h4>Innovation</h4>
-                    <p>Continuous R&D in AI optics and advanced energy density materials.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Aether Power Labs. All rights reserved.</p>
-            <p style="font-size: 12px; margin-top: 10px; color: #555;">demi@aetherpowerlabs.com</p>
+            <p>&copy; 2026 Aether Power Labs</p>
+            <p style="font-size: 12px; margin-top: 8px;">demi@aetherpowerlabs.com</p>
         </div>
     </footer>
 
