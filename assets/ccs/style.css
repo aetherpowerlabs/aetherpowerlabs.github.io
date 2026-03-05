@@ -1,115 +1,163 @@
-/* --- 彻底重置：强行踢开 GitHub 默认样式 --- */
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box !important; 
-}
+/* --- Global Reset & Black Theme --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* 强制背景为深邃黑，文字为纯净白 */
+html { scroll-behavior: smooth; }
+
 body {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif !important;
-    line-height: 1.6 !important;
-    display: block !important; /* 防止被变成 flex */
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 让容器居中 */
-.container { 
-    max-width: 1200px !important; 
-    margin: 0 auto !important; 
-    padding: 0 20px !important; 
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+/* --- Header --- */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 70px;
+    border-bottom: 1px solid #1c1c1e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* --- 导航栏：找回消失的按钮 --- */
-.site-header {
-    background: rgba(0, 0, 0, 0.9) !important;
-    position: fixed !important;
-    width: 100% !important;
-    top: 0 !important;
-    z-index: 9999 !important;
-    border-bottom: 1px solid #333 !important;
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
-.site-header .container {
-    display: flex !important;
-    justify-content: space-between !important;
-    height: 70px !important;
-    align-items: center !important;
-}
-
-.logo { font-size: 24px !important; font-weight: 700 !important; color: #fff !important; }
-.logo span { color: #0071e3 !important; }
+.logo { font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+.logo span { color: #0071e3; }
 
 .btn-contact {
-    background: #0071e3 !important;
-    color: #ffffff !important;
-    padding: 10px 20px !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
+    color: #0071e3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    border: 1px solid #0071e3;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
-/* --- Hero 区域：解决文字看不见的问题 --- */
+.btn-contact:hover { background: #0071e3; color: #fff; }
+
+/* --- Hero --- */
 .hero {
-    height: 100vh !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    /* 这里的路径确保图片能出来 */
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/banner1.jpg') center/cover no-repeat !important;
-    padding-top: 70px !important;
+    padding: 120px 0 80px;
+    text-align: center;
+    background: radial-gradient(circle at center, #111 0%, #000 70%);
 }
 
-.hero h1 { 
-    font-size: clamp(40px, 8vw, 72px) !important; 
-    color: #ffffff !important; 
-    margin-bottom: 20px !important;
-    font-weight: 800 !important;
+.hero-badge {
+    color: #0071e3;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 
-.hero p { 
-    font-size: 20px !important; 
-    color: #a1a1a6 !important; 
-    max-width: 700px !important;
-    margin-bottom: 40px !important;
+.hero h1 {
+    font-size: clamp(40px, 8vw, 72px);
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
 }
+
+.hero p {
+    font-size: 20px;
+    color: #a1a1a6;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-weight: 300;
+}
+
+.hero-actions { display: flex; gap: 15px; justify-content: center; }
 
 .btn-primary {
-    background: #ffffff !important;
-    color: #000000 !important;
-    padding: 18px 45px !important;
-    border-radius: 50px !important;
-    text-decoration: none !important;
-    font-weight: 700 !important;
+    background: #fff;
+    color: #000;
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
 }
 
-/* --- 产品展示：大厂感网格 --- */
-.products-section { padding: 100px 0 !important; background: #000 !important; }
-.section-title { text-align: center !important; font-size: 40px !important; margin-bottom: 60px !important; color: #fff !important; }
+.btn-secondary {
+    background: #1c1c1e;
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { transform: scale(1.05); background: #f5f5f7; }
+
+/* --- Products --- */
+.products-section { padding: 100px 0; }
+.section-title { text-align: center; font-size: 32px; margin-bottom: 60px; font-weight: 700; }
 
 .product-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
-    gap: 40px !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
 }
 
 .product-card {
-    background: #1c1c1e !important;
-    padding: 40px !important;
-    border-radius: 28px !important;
-    border: 1px solid #333 !important;
-    text-align: center !important;
+    background: #0f0f0f;
+    padding: 32px;
+    border-radius: 24px;
+    border: 1px solid #1c1c1e;
+    transition: 0.4s;
 }
 
-.product-card img { 
-    width: 100% !important; 
-    border-radius: 16px !important; 
-    margin-bottom: 25px !important; 
-    height: auto !important;
+.product-card:hover { border-color: #0071e3; transform: translateY(-8px); }
+
+.img-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: #1c1c1e;
 }
 
-.product-card h3 { color: #fff !important; font-size: 24px !important; margin-bottom: 15px !important; }
-.product-card p { color: #86868b !important; }
+.product-card img { width: 100%; height: 100%; object-fit: cover; }
+
+.product-card h3 { font-size: 22px; margin-bottom: 12px; }
+.product-card p { color: #86868b; font-size: 15px; line-height: 1.5; }
+
+/* --- Core Values --- */
+.values-section { padding: 80px 0; background: #080808; border-top: 1px solid #111; }
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+.value-item h4 { color: #0071e3; font-size: 24px; margin-bottom: 10px; }
+.value-item p { color: #86868b; font-size: 16px; }
+
+/* --- Footer --- */
+footer {
+    padding: 80px 0 40px;
+    text-align: center;
+    color: #444;
+    border-top: 1px solid #111;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .hero-actions { flex-direction: column; align-items: center; }
+}
