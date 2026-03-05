@@ -4,57 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Vision Pro | Aether Power Labs</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        .detail-hero { padding: 100px 0 60px; background: #050505; border-bottom: 1px solid #1c1c1e; min-height: 90vh; }
-        .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; margin-top: 40px; }
-        .detail-image { width: 100%; border-radius: 24px; border: 1px solid #1c1c1e; overflow: hidden; background: #111; }
-        .detail-image img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
-        .detail-info h1 { font-size: 48px; margin-bottom: 10px; font-weight: 800; color: #fff; }
-        .detail-info .category { color: #0071e3; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-bottom: 20px; }
-        .detail-info .desc { color: #a1a1a6; font-size: 18px; line-height: 1.6; margin-bottom: 40px; }
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
-        .specs-table tr { border-bottom: 1px solid #1c1c1e; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
+        header { height: 80px; display: flex; align-items: center; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo-link { text-decoration: none; color: #000; font-size: 24px; font-weight: 700; }
+        .logo span { color: #0071e3; }
+        .btn-contact { color: #0071e3; text-decoration: none; font-weight: 600; }
+        main { padding: 60px 0; }
+        .back-link { display: inline-block; text-decoration: none; color: #86868b; font-size: 14px; margin-bottom: 40px; }
+        .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
+        .img-wrapper { border-radius: 24px; overflow: hidden; background: #f5f5f7; border: 1px solid #eee; }
+        .img-wrapper img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
+        .info-section .category { color: #0071e3; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
+        .info-section h1 { font-size: 48px; font-weight: 700; margin-bottom: 25px; letter-spacing: -1px; }
+        .info-section .desc { font-size: 18px; color: #424245; margin-bottom: 40px; }
+        .specs-title { font-size: 20px; font-weight: 600; margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px; }
+        .specs-table { width: 100%; border-collapse: collapse; }
+        .specs-table tr { border-bottom: 1px solid #eee; }
         .specs-table td { padding: 15px 0; font-size: 15px; }
-        .specs-table td:first-child { color: #666; width: 40%; }
-        .specs-table td:last-child { color: #fff; font-weight: 600; }
-        .cta-box { margin-top: 50px; padding: 30px; background: #0a0a0a; border-radius: 20px; border: 1px solid #0071e3; }
-        @media (max-width: 968px) { .detail-grid { grid-template-columns: 1fr; } }
+        .specs-table td:first-child { color: #86868b; width: 40%; }
+        .specs-table td:last-child { color: #000; font-weight: 500; }
+        footer { padding: 60px 0; text-align: center; color: #86868b; font-size: 14px; border-top: 1px solid #eee; margin-top: 100px; }
+        @media (max-width: 968px) { .detail-grid { grid-template-columns: 1fr; gap: 40px; } }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-flex">
             <a href="index.html" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
-            <nav><a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Inquiry Now</a></nav>
+            <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Contact Sales</a>
         </div>
     </header>
-
-    <main class="detail-hero">
-        <div class="container">
-            <a href="index.html" style="color: #666; text-decoration: none; font-size: 14px;">&larr; Back to Solutions</a>
-            <div class="detail-grid">
-                <div class="detail-image"><img src="assets/images/ai-glasses.jpg" alt="AI Glasses"></div>
-                <div class="detail-info">
-                    <div class="category">AR Optical Engineering</div>
-                    <h1>Smart Vision Pro</h1>
-                    <p class="desc">Leading-edge diffraction waveguide technology designed for high-precision industrial AR and real-time AI spatial recognition systems.</p>
-                    <h4>Technical Specifications</h4>
-                    <table class="specs-table">
-                        <tr><td>Optics Type</td><td>Diffraction Waveguide</td></tr>
-                        <tr><td>Transparency</td><td>≥ 85%</td></tr>
-                        <tr><td>FOV</td><td>45° (Customizable)</td></tr>
-                        <tr><td>Display Support</td><td>Micro-OLED / Micro-LED</td></tr>
-                        <tr><td>Weight</td><td>32g (Module)</td></tr>
-                    </table>
-                    <div class="cta-box">
-                        <h4>Request Technical Datasheet</h4>
-                        <p style="color: #888; font-size: 14px; margin-bottom: 20px;">Contact us for OEM/ODM optical module integration services.</p>
-                        <a href="mailto:demi@aetherpowerlabs.com" class="btn-primary" style="display: inline-block;">Email Demi Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+    <main class="container">
+        <a href="index.html" class="back-link">← Back to Solutions</a>
+        <div class="detail-grid">
+            <div class="img-wrapper"><img src="assets/images/ai-glasses.jpg" alt="AI Glasses"></div>
+            <div class="info-section">
+                <div class="category
