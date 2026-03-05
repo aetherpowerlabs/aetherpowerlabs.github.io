@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrial ESS | Aether Power Labs</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* 样式同上，保持视觉一致性 */
+        .detail-hero { padding: 100px 0 60px; background: #050505; border-bottom: 1px solid #1c1c1e; min-height: 90vh; }
+        .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; align-items: start; margin-top: 40px; }
+        .detail-image { width: 100%; border-radius: 24px; border: 1px solid #1c1c1e; overflow: hidden; background: #111; }
+        .detail-image img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
+        .detail-info h1 { font-size: 48px; margin-bottom: 10px; font-weight: 800; color: #fff; }
+        .detail-info .category { color: #0071e3; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 14px; margin-bottom: 20px; }
+        .detail-info .desc { color: #a1a1a6; font-size: 18px; line-height: 1.6; margin-bottom: 40px; }
+        .specs-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        .specs-table tr { border-bottom: 1px solid #1c1c1e; }
+        .specs-table td { padding: 15px 0; font-size: 15px; }
+        .specs-table td:first-child { color: #666; width: 40%; }
+        .specs-table td:last-child { color: #fff; font-weight: 600; }
+        .cta-box { margin-top: 50px; padding: 30px; background: #0a0a0a; border-radius: 20px; border: 1px solid #0071e3; }
+        @media (max-width: 968px) { .detail-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
+            <nav><a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Inquiry Now</a></nav>
+        </div>
+    </header>
+
+    <main class="detail-hero">
+        <div class="container">
+            <a href="index.html" style="color: #666; text-decoration: none; font-size: 14px;">&larr; Back to Solutions</a>
+            <div class="detail-grid">
+                <div class="detail-image"><img src="assets/images/battery-storage.jpg" alt="Energy Storage"></div>
+                <div class="detail-info">
+                    <div class="category">Industrial Energy Systems</div>
+                    <h1>Industrial ESS</h1>
+                    <p class="desc">Modular and scalable Lithium Iron Phosphate (LiFePO4) energy storage solutions engineered for industrial resilience and grid stability.</p>
+                    <h4>Technical Specifications</h4>
+                    <table class="specs-table">
+                        <tr><td>Cell Chemistry</td><td>LFP (LiFePO4)</td></tr>
+                        <tr><td>Cycle Life</td><td>≥ 6,000 Cycles @ 80% DOD</td></tr>
+                        <tr><td>Communication</td><td>CAN / RS485 / RS232</td></tr>
+                        <tr><td>Efficiency</td><td>> 95% Round-trip</td></tr>
+                        <tr><td>Certification</td><td>UL1973, CE, UN38.3</td></tr>
+                    </table>
+                    <div class="cta-box">
+                        <h4>Project Consultation</h4>
+                        <p style="color: #888; font-size: 14px; margin-bottom: 20px;">Partner with our engineers to scale your energy infrastructure.</p>
+                        <a href="mailto:demi@aetherpowerlabs.com" class="btn-primary" style="display: inline-block;">Consult Demi Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
