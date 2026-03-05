@@ -1,84 +1,115 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    background-color: #000000 !important;
-    color: #ffffff;
-    font-family: -apple-system, sans-serif;
-    line-height: 1.6;
+/* --- 彻底重置：强行踢开 GitHub 默认样式 --- */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box !important; 
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+/* 强制背景为深邃黑，文字为纯净白 */
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif !important;
+    line-height: 1.6 !important;
+    display: block !important; /* 防止被变成 flex */
+}
 
-/* 导航栏 */
+/* 让容器居中 */
+.container { 
+    max-width: 1200px !important; 
+    margin: 0 auto !important; 
+    padding: 0 20px !important; 
+}
+
+/* --- 导航栏：找回消失的按钮 --- */
 .site-header {
-    background: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.9) !important;
+    position: fixed !important;
+    width: 100% !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    border-bottom: 1px solid #333 !important;
 }
 
 .site-header .container {
-    display: flex;
-    justify-content: space-between;
-    height: 70px;
-    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+    height: 70px !important;
+    align-items: center !important;
 }
 
-.logo { font-size: 24px; font-weight: 700; }
-.logo span { color: #0071e3; }
+.logo { font-size: 24px !important; font-weight: 700 !important; color: #fff !important; }
+.logo span { color: #0071e3 !important; }
 
 .btn-contact {
-    background: #0071e3;
-    color: #fff;
-    padding: 10px 22px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 14px;
+    background: #0071e3 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
 }
 
-/* Banner 区域 */
+/* --- Hero 区域：解决文字看不见的问题 --- */
 .hero {
-    height: 85vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/banner1.jpg') center/cover no-repeat;
+    height: 100vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    /* 这里的路径确保图片能出来 */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('../images/banner1.jpg') center/cover no-repeat !important;
+    padding-top: 70px !important;
 }
 
-.hero h1 { font-size: clamp(36px, 8vw, 60px); margin-bottom: 20px; font-weight: bold; }
-.hero p { color: #888; font-size: 18px; max-width: 600px; margin: 0 auto 30px; }
+.hero h1 { 
+    font-size: clamp(40px, 8vw, 72px) !important; 
+    color: #ffffff !important; 
+    margin-bottom: 20px !important;
+    font-weight: 800 !important;
+}
+
+.hero p { 
+    font-size: 20px !important; 
+    color: #a1a1a6 !important; 
+    max-width: 700px !important;
+    margin-bottom: 40px !important;
+}
 
 .btn-primary {
-    background: #fff;
-    color: #000;
-    padding: 15px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
+    background: #ffffff !important;
+    color: #000000 !important;
+    padding: 18px 45px !important;
+    border-radius: 50px !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
 }
 
-/* 产品卡片 */
-.products-section { padding: 100px 0; }
-.section-title { text-align: center; font-size: 32px; margin-bottom: 60px; }
+/* --- 产品展示：大厂感网格 --- */
+.products-section { padding: 100px 0 !important; background: #000 !important; }
+.section-title { text-align: center !important; font-size: 40px !important; margin-bottom: 60px !important; color: #fff !important; }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 40px !important;
 }
 
 .product-card {
-    background: #111;
-    padding: 30px;
-    border-radius: 24px;
-    border: 1px solid #222;
+    background: #1c1c1e !important;
+    padding: 40px !important;
+    border-radius: 28px !important;
+    border: 1px solid #333 !important;
+    text-align: center !important;
 }
 
-.product-card img { width: 100%; border-radius: 12px; margin-bottom: 20px; }
-.product-card h3 { margin-bottom: 10px; }
-.product-card p { color: #888; font-size: 14px; }
+.product-card img { 
+    width: 100% !important; 
+    border-radius: 16px !important; 
+    margin-bottom: 25px !important; 
+    height: auto !important;
+}
 
-footer { padding: 50px 0; text-align: center; color: #444; border-top: 1px solid #222; }
+.product-card h3 { color: #fff !important; font-size: 24px !important; margin-bottom: 15px !important; }
+.product-card p { color: #86868b !important; }
