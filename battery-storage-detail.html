@@ -3,62 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial ESS | Aether Power Labs</title>
+    <title>Battery Storage | Aether Power Labs</title>
     <style>
-        /* 样式代码与上方完全一致，保持视觉统一 */
+        /* 样式代码与 glasses.html 100% 一致 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; line-height: 1.5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
-        header { height: 80px; display: flex; align-items: center; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: #fff; z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-link { text-decoration: none; color: #000; font-size: 24px; font-weight: 700; }
+        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; }
         .logo span { color: #0071e3; }
-        .btn-contact { color: #0071e3; text-decoration: none; font-weight: 600; }
-        main { padding: 60px 0; }
-        .back-link { display: inline-block; text-decoration: none; color: #86868b; font-size: 14px; margin-bottom: 40px; }
-        .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
-        .img-wrapper { border-radius: 24px; overflow: hidden; background: #f5f5f7; border: 1px solid #eee; }
-        .img-wrapper img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
-        .info-section .category { color: #0071e3; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-        .info-section h1 { font-size: 48px; font-weight: 700; margin-bottom: 25px; letter-spacing: -1px; }
-        .info-section .desc { font-size: 18px; color: #424245; margin-bottom: 40px; }
-        .specs-title { font-size: 20px; font-weight: 600; margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px; }
-        .specs-table { width: 100%; border-collapse: collapse; }
-        .specs-table tr { border-bottom: 1px solid #eee; }
-        .specs-table td { padding: 15px 0; font-size: 15px; }
-        .specs-table td:first-child { color: #86868b; width: 40%; }
-        .specs-table td:last-child { color: #000; font-weight: 500; }
-        footer { padding: 60px 0; text-align: center; color: #86868b; font-size: 14px; border-top: 1px solid #eee; margin-top: 100px; }
-        @media (max-width: 968px) { .detail-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .contact-sales { color: #0071e3; text-decoration: none; font-size: 14px; font-weight: 500; }
+        .product-hero { padding: 80px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .product-image { width: 100%; border-radius: 20px; overflow: hidden; background: #f5f5f7; border: 1px solid #f0f0f0; }
+        .product-image img { width: 100%; display: block; }
+        .category-tag { color: #0071e3; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: 700; margin-bottom: 15px; display: block; }
+        .product-info h1 { font-size: 48px; margin-bottom: 25px; letter-spacing: -1px; }
+        .product-info .desc { color: #424245; font-size: 18px; margin-bottom: 40px; }
+        .spec-section h2 { font-size: 20px; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .spec-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f5f5f7; font-size: 14px; }
+        .spec-label { color: #86868b; }
+        .spec-value { font-weight: 600; }
+        .cta-link { display: inline-block; margin-top: 40px; color: #0071e3; text-decoration: none; font-weight: 600; }
+        footer { padding: 60px 0; text-align: center; color: #86868b; border-top: 1px solid #f5f5f7; margin-top: 80px; font-size: 12px; }
+        @media (max-width: 968px) { .product-hero { grid-template-columns: 1fr; gap: 40px; } .product-info h1 { font-size: 32px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-flex">
-            <a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
-            <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Contact Sales</a>
-        </div>
-    </header>
+    <header><div class="container header-flex"><a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a><a href="mailto:demi@aetherpowerlabs.com" class="contact-sales">Contact Sales</a></div></header>
     <main class="container">
-        <div class="detail-grid">
-            <div class="img-wrapper"><img src="assets/images/battery-storage.jpg" alt="Energy Storage"></div>
-            <div class="info-section">
-                <div class="category">Industrial Energy Systems</div>
+        <section class="product-hero">
+            <div class="product-image"><img src="assets/images/battery-storage.jpg" alt="Battery Storage"></div>
+            <div class="product-info">
+                <span class="category-tag">Energy Solutions</span>
                 <h1>Battery Storage</h1>
                 <p class="desc">Modular LFP energy storage systems engineered for commercial-scale power resilience and smart grid management.</p>
-                <h4 class="specs-title">Technical Specifications</h4>
-                <table class="specs-table">
-                    <tr><td>Cell Chemistry</td><td>Tier-1 LiFePO4 (LFP)</td></tr>
-                    <tr><td>Cycle Life</td><td>≥ 6,000 Cycles @ 80% DOD</td></tr>
-                    <tr><td>Efficiency</td><td>> 95% Round-trip</td></tr>
-                    <tr><td>Certification</td><td>UL1973, CE, UN38.3</td></tr>
-                </table>
-                <div style="margin-top: 40px;">
-                    <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact" style="font-size: 16px;">Request Technical Quote →</a>
+                <div class="spec-section">
+                    <h2>Technical Specifications</h2>
+                    <div class="spec-item"><span class="spec-label">Cell Chemistry</span><span class="spec-value">LiFePO4 (LFP)</span></div>
+                    <div class="spec-item"><span class="spec-label">Cycle Life</span><span class="spec-value">≥ 6,000 Cycles</span></div>
+                    <div class="spec-item"><span class="spec-label">Efficiency</span><span class="spec-value">> 95%</span></div>
+                    <div class="spec-item"><span class="spec-label">Certification</span><span class="spec-value">UL1973, CE, UN38.3</span></div>
                 </div>
+                <a href="mailto:demi@aetherpowerlabs.com" class="cta-link">Request Technical Quote →</a>
             </div>
-        </div>
+        </section>
     </main>
-    <footer><div class="container"><p>&copy; 2026 Aether Power Labs. All rights reserved.</p></div></footer>
+    <footer><p>&copy; 2026 Aether Power Labs. All rights reserved.</p></footer>
 </body>
 </html>
