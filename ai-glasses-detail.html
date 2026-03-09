@@ -5,103 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Smart Glasses | Aether Power Labs</title>
     <style>
-        /* 苹果极简风格：白底黑字 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; line-height: 1.47; }
+        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.5; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        
-        /* Header 导航栏 */
-        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); sticky; top: 0; z-index: 99; }
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; sticky; top: 0; background: #fff; z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-link { text-decoration: none; color: #000000; font-size: 22px; font-weight: 700; }
+        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; }
         .logo span { color: #0071e3; }
-        .contact-sales { color: #0071e3; text-decoration: none; font-size: 14px; font-weight: 400; }
-        .contact-sales:hover { text-decoration: underline; }
-
-        /* 产品布局 */
+        .contact-sales { color: #0071e3; text-decoration: none; font-size: 14px; font-weight: 500; }
         .product-hero { padding: 80px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-        .product-image { width: 100%; border-radius: 24px; overflow: hidden; background: #f5f5f7; }
-        .product-image img { width: 100%; height: auto; display: block; object-fit: cover; }
-
-        /* 右侧信息区 */
-        .category-tag { color: #0071e3; text-transform: uppercase; letter-spacing: 0.5px; font-size: 12px; font-weight: 600; margin-bottom: 15px; display: block; }
-        .product-info h1 { font-size: 56px; margin-bottom: 25px; letter-spacing: -1.2px; font-weight: 700; line-height: 1.1; }
-        .product-info .desc { color: #424245; font-size: 19px; margin-bottom: 50px; max-width: 500px; font-weight: 400; }
-
-        /* 参数表格样式 */
-        .spec-section h2 { font-size: 21px; margin-bottom: 30px; font-weight: 600; color: #000000; }
-        .spec-grid { border-top: 1px solid #d2d2d7; }
-        .spec-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #d2d2d7; }
-        .spec-label { color: #86868b; font-size: 14px; }
-        .spec-value { font-weight: 600; color: #000000; font-size: 14px; }
-
-        /* 底部操作链接 */
-        .cta-link { display: inline-block; margin-top: 45px; color: #0066cc; text-decoration: none; font-weight: 400; font-size: 17px; }
-        .cta-link:hover { text-decoration: underline; }
-
-        /* 响应式适配 */
-        @media (max-width: 968px) {
-            .product-hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
-            .product-info h1 { font-size: 40px; }
-            .container { padding: 0 20px; }
-        }
+        .product-image { width: 100%; border-radius: 20px; overflow: hidden; background: #f5f5f7; }
+        .product-image img { width: 100%; display: block; }
+        .category-tag { color: #0071e3; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; font-weight: 700; margin-bottom: 15px; display: block; }
+        .product-info h1 { font-size: 48px; margin-bottom: 25px; letter-spacing: -1px; }
+        .product-info .desc { color: #424245; font-size: 18px; margin-bottom: 40px; }
+        .spec-section h2 { font-size: 20px; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .spec-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f5f5f7; font-size: 14px; }
+        .spec-label { color: #86868b; }
+        .spec-value { font-weight: 600; }
+        .cta-link { display: inline-block; margin-top: 40px; color: #0071e3; text-decoration: none; font-weight: 600; }
+        footer { padding: 60px 0; text-align: center; color: #86868b; border-top: 1px solid #eee; margin-top: 80px; font-size: 12px; }
+        @media (max-width: 968px) { .product-hero { grid-template-columns: 1fr; gap: 40px; } .product-info h1 { font-size: 32px; } }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container header-flex">
-            <a href="AI-Smart—Glasses" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
-            <a href="mailto:demi@aetherpowerlabs.com" class="contact-sales">Contact Sales</a>
-        </div>
-    </header>
-
+    <header><div class="container header-flex"><a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a><a href="mailto:demi@aetherpowerlabs.com" class="contact-sales">Contact Sales</a></div></header>
     <main class="container">
         <section class="product-hero">
-            <div class="product-image">
-                <img src="assets/images/ai-glasses.jpg" alt="AI Smart Glasses">
-            </div>
-            
+            <div class="product-image"><img src="assets/images/ai-glasses.jpg" alt="AI Smart Glasses"></div>
             <div class="product-info">
-                <span class="category-tag">AR Optical Engineering</span>
+                <span class="category-tag">AI & Optics</span>
                 <h1>AI Smart Glasses</h1>
-                
                 <p class="desc">Leading-edge diffraction waveguide technology designed for high-precision industrial AR and real-time AI spatial recognition systems.</p>
-
                 <div class="spec-section">
                     <h2>Technical Specifications</h2>
-                    <div class="spec-grid">
-                        <div class="spec-item">
-                            <span class="spec-label">Optical Type</span>
-                            <span class="spec-value">Diffraction Waveguide</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Transparency</span>
-                            <span class="spec-value">≥ 85% High Transmission</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Field of View (FOV)</span>
-                            <span class="spec-value">45° (Customizable)</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Display Source</span>
-                            <span class="spec-value">Micro-OLED / Micro-LED</span>
-                        </div>
-                        <div class="spec-item">
-                            <span class="spec-label">Module Weight</span>
-                            <span class="spec-value">32g Ultra-Lightweight</span>
-                        </div>
-                    </div>
+                    <div class="spec-item"><span class="spec-label">Optical Type</span><span class="spec-value">Diffraction Waveguide</span></div>
+                    <div class="spec-item"><span class="spec-label">Transparency</span><span class="spec-value">≥ 85%</span></div>
+                    <div class="spec-item"><span class="spec-label">Field of View</span><span class="spec-value">45° (Customizable)</span></div>
+                    <div class="spec-item"><span class="spec-label">Module Weight</span><span class="spec-value">32g</span></div>
                 </div>
-
                 <a href="mailto:demi@aetherpowerlabs.com" class="cta-link">Request Technical Datasheet →</a>
             </div>
         </section>
     </main>
-
-    <footer style="padding: 60px 0; text-align: center; color: #86868b; border-top: 1px solid #f5f5f7; margin-top: 80px;">
-        <div class="container">
-            <p style="font-size: 12px;">&copy; 2026 Aether Power Labs. All rights reserved.</p>
-        </div>
-    </footer>
+    <footer><p>&copy; 2026 Aether Power Labs. All rights reserved.</p></footer>
 </body>
 </html>
