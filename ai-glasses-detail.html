@@ -3,44 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Vision Pro | Aether Power Labs</title>
+    <title>AI Smart Glasses | Aether Power Labs</title>
     <style>
+        /* 核心极简黑金样式 - 与 Industrial ESS 保持 100% 一致 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: #ffffff; color: #000000; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; line-height: 1.5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 25px; }
-        header { height: 80px; display: flex; align-items: center; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #eee; }
+        body { background-color: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        
+        /* Header 结构 */
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #111; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-link { text-decoration: none; color: #000; font-size: 24px; font-weight: 700; }
+        .logo-link { text-decoration: none; color: #fff; font-size: 22px; font-weight: 700; }
         .logo span { color: #0071e3; }
-        .btn-contact { color: #0071e3; text-decoration: none; font-weight: 600; }
-        main { padding: 60px 0; }
-        .back-link { display: inline-block; text-decoration: none; color: #86868b; font-size: 14px; margin-bottom: 40px; }
-        .detail-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: start; }
-        .img-wrapper { border-radius: 24px; overflow: hidden; background: #f5f5f7; border: 1px solid #eee; }
-        .img-wrapper img { width: 100%; display: block; object-fit: cover; aspect-ratio: 4/3; }
-        .info-section .category { color: #0071e3; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; }
-        .info-section h1 { font-size: 48px; font-weight: 700; margin-bottom: 25px; letter-spacing: -1px; }
-        .info-section .desc { font-size: 18px; color: #424245; margin-bottom: 40px; }
-        .specs-title { font-size: 20px; font-weight: 600; margin-bottom: 20px; border-top: 1px solid #eee; padding-top: 20px; }
-        .specs-table { width: 100%; border-collapse: collapse; }
-        .specs-table tr { border-bottom: 1px solid #eee; }
-        .specs-table td { padding: 15px 0; font-size: 15px; }
-        .specs-table td:first-child { color: #86868b; width: 40%; }
-        .specs-table td:last-child { color: #000; font-weight: 500; }
-        footer { padding: 60px 0; text-align: center; color: #86868b; font-size: 14px; border-top: 1px solid #eee; margin-top: 100px; }
-        @media (max-width: 968px) { .detail-grid { grid-template-columns: 1fr; gap: 40px; } }
+        .contact-sales { color: #0071e3; text-decoration: none; font-size: 14px; font-weight: 600; }
+
+        /* 详情布局 */
+        .product-hero { padding: 80px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+        .product-image { width: 100%; border-radius: 24px; overflow: hidden; background: #0a0a0a; border: 1px solid #1c1c1e; }
+        .product-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+
+        /* 文字信息 */
+        .category-tag { color: #0071e3; text-transform: uppercase; letter-spacing: 2px; font-size: 13px; font-weight: 700; margin-bottom: 20px; display: block; }
+        .product-info h1 { font-size: 48px; margin-bottom: 24px; letter-spacing: -1px; font-weight: 700; }
+        .product-info .desc { color: #86868b; font-size: 18px; margin-bottom: 40px; max-width: 500px; }
+
+        /* 参数表格样式 */
+        .spec-section h2 { font-size: 20px; margin-bottom: 30px; border-bottom: 1px solid #222; padding-bottom: 15px; font-weight: 600; }
+        .spec-grid { display: grid; gap: 0; }
+        .spec-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #111; }
+        .spec-label { color: #86868b; font-size: 15px; }
+        .spec-value { font-weight: 500; color: #fff; font-size: 15px; }
+
+        /* 底部链接 */
+        .cta-link { display: inline-block; margin-top: 40px; color: #0071e3; text-decoration: none; font-weight: 600; font-size: 16px; transition: 0.3s; }
+        .cta-link:hover { opacity: 0.8; }
+
+        /* 响应式适配 */
+        @media (max-width: 968px) {
+            .product-hero { grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
+            .product-info h1 { font-size: 36px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-flex">
-            <a href="index.html" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
-            <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact">Contact Sales</a>
+            <a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
+            <a href="mailto:demi@aetherpowerlabs.com" class="contact-sales">Contact Sales</a>
         </div>
     </header>
+
     <main class="container">
-        <a href="index.html" class="back-link">← Back to Solutions</a>
-        <div class="detail-grid">
-            <div class="img-wrapper"><img src="assets/images/ai-glasses.jpg" alt="AI Glasses"></div>
-            <div class="info-section">
-                <div class="category
+        <section class="product-hero">
+            <div class="product-image">
+                <img src="assets/images/ai-glasses.jpg" alt="AI Smart Glasses">
+            </div>
+            
+            <div class="product-info">
+                <span class="category-tag">AR Optical Engineering</span>
+                <h1>AI Smart Glasses</h1>
+                
+                <p class="desc">Leading-edge diffraction waveguide technology designed for high-precision industrial AR and real-time AI spatial recognition systems.</p>
+
+                <div class="spec-section">
+                    <h2>Technical Specifications</h2>
+                    <div class="spec-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Optical Type</span>
+                            <span class="spec-value">Diffraction Waveguide</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Transparency</span>
+                            <span class="spec-value">≥ 85% High Transmission</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Field of View (FOV)</span>
+                            <span class="spec-value">45° (Customizable)</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Display Source</span>
+                            <span class="spec-value">Micro-OLED / Micro-LED</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Module Weight</span>
+                            <span class="spec-value">32g Ultra-Lightweight</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="mailto:demi@aetherpowerlabs.com" class="cta-link">Request Technical Datasheet →</a>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 60px 0; text-align: center; color: #444; border-top: 1px solid #111; margin-top: 80px;">
+        <div class="container">
+            <p style="font-size: 14px;">&copy; 2026 Aether Power Labs. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
