@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battery Storage | Aether Power Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; color: #000; font-family: -apple-system, sans-serif; }
+        body { background: #fff; color: #1d1d1f; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: #fff; z-index: 100; }
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; }
+        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: #0071e3; }
-        .main-nav { display: flex; gap: 30px; }
-        .nav-link { color: #86868b; text-decoration: none; font-size: 14px; }
-        .btn-contact { color: #0071e3; text-decoration: none; font-weight: 600; font-size: 14px; }
-        .product-hero { padding: 80px 0; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: start; }
-        .product-image img { width: 100%; border-radius: 20px; border: 1px solid #f0f0f0; }
-        .product-info h1 { font-size: 48px; margin-bottom: 25px; letter-spacing: -1px; }
+        .main-nav { display: flex; gap: 40px; align-items: center; }
+        .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
+        .nav-link:hover { color: #000; }
+        .product-hero { padding: 100px 0; display: grid; grid-template-columns: 1.3fr 1fr; gap: 80px; align-items: start; }
+        .product-image img { width: 100%; border-radius: 20px; border: 1px solid #f0f0f0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .product-info h1 { font-size: 48px; font-weight: 700; margin-bottom: 24px; letter-spacing: -1.2px; color: #000; }
         .product-info p { color: #424245; font-size: 18px; margin-bottom: 40px; line-height: 1.6; }
-        .spec-item { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f5f5f7; font-size: 14px; }
-        .spec-label { color: #86868b; }
-        .spec-value { font-weight: 600; }
-        .cta-link { display: inline-block; margin-top: 40px; color: #0071e3; text-decoration: none; font-weight: 600; font-size: 18px; }
+        .spec-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid #f5f5f7; font-size: 14px; }
+        .spec-label { color: #86868b; font-weight: 400; }
+        .spec-value { font-weight: 600; color: #1d1d1f; }
+        .cta-link { display: inline-block; margin-top: 48px; color: #0071e3; text-decoration: none; font-weight: 600; font-size: 17px; }
         footer { padding: 60px 0; text-align: center; color: #86868b; border-top: 1px solid #f5f5f7; font-size: 12px; }
     </style>
 </head>
@@ -32,4 +33,25 @@
             <nav class="main-nav">
                 <a href="about.html" class="nav-link">About Us</a>
                 <a href="/#products-section" class="nav-link">Product</a>
-                <a href="mailto:demi@aetherpowerlabs.com" class="btn-contact
+                <a href="mailto:demi@aetherpowerlabs.com" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section class="product-hero">
+            <div class="product-image"><img src="assets/images/battery-storage.jpg" alt="Battery Storage"></div>
+            <div class="product-info">
+                <h1>Battery Storage</h1>
+                <p>Modular LFP energy storage systems designed for industrial-scale resilience and smart grid management. Tier-1 cell chemistry for mission-critical power.</p>
+                <div class="specs">
+                    <div class="spec-item"><span class="spec-label">Chemistry</span><span class="spec-value">LiFePO4 (LFP)</span></div>
+                    <div class="spec-item"><span class="spec-label">Cycle Life</span><span class="spec-value">≥ 6,000 Cycles</span></div>
+                    <div class="spec-item"><span class="spec-label">Certification</span><span class="spec-value">UL, CE, UN38.3</span></div>
+                </div>
+                <a href="mailto:demi@aetherpowerlabs.com" class="cta-link">Send Inquiry →</a>
+            </div>
+        </section>
+    </main>
+    <footer>© 2026 Aether Power Labs. All rights reserved.</footer>
+</body>
+</html>
