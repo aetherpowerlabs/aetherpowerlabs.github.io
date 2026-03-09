@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Aether Power Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; color: #1d1d1f; font-family: -apple-system, sans-serif; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 40px; }
-        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; sticky; top: 0; background: #fff; z-index: 100; }
+        body { background: #fff; color: #1d1d1f; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; background: #fff; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; }
+        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: #0071e3; }
-        .main-nav { display: flex; gap: 35px; }
-        .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; }
         
-        /* About 专属设计 */
-        .about-hero { padding: 120px 0 60px; text-align: center; background: #fbfbfd; }
-        .about-hero h1 { font-size: 64px; letter-spacing: -2px; margin-bottom: 20px; }
-        .about-hero p { font-size: 24px; color: #86868b; max-width: 700px; margin: 0 auto; line-height: 1.4; }
+        .main-nav { display: flex; gap: 40px; align-items: center; }
+        .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
+        .nav-link:hover { color: #000; }
 
-        .mission-grid { padding: 100px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .mission-content h2 { font-size: 32px; margin-bottom: 20px; }
-        .mission-content p { font-size: 18px; color: #424245; line-height: 1.6; margin-bottom: 20px; }
-        .mission-image img { width: 100%; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-
-        .stats { background: #000; color: #fff; padding: 80px 0; text-align: center; }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
-        .stat-item h3 { font-size: 48px; color: #0071e3; margin-bottom: 10px; }
-        .stat-item p { color: #86868b; text-transform: uppercase; letter-spacing: 1px; font-size: 12px; }
-
-        footer { padding: 60px 0; text-align: center; color: #86868b; font-size: 12px; border-top: 1px solid #f5f5f7; }
+        .about-section { padding: 140px 0; }
+        .about-section h1 { font-size: 80px; letter-spacing: -4px; font-weight: 700; line-height: 0.9; margin-bottom: 48px; color: #000; }
+        .about-section p { font-size: 24px; color: #86868b; line-height: 1.5; max-width: 720px; margin-bottom: 80px; font-weight: 400; }
+        .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; border-top: 1px solid #eee; padding-top: 80px; }
+        .vision-item h2 { font-size: 28px; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.5px; }
+        .vision-item p { font-size: 17px; color: #424245; line-height: 1.7; }
+        footer { padding: 80px 0; text-align: center; color: #a1a1a6; font-size: 12px; }
     </style>
 </head>
 <body>
@@ -37,39 +31,26 @@
         <div class="container header-flex">
             <a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
             <nav class="main-nav">
-                <a href="about.html" class="nav-link" style="color:#000;">About Us</a>
+                <a href="about.html" class="nav-link" style="color:#000; font-weight:600;">About Us</a>
                 <a href="/#products-section" class="nav-link">Product</a>
-                <a href="mailto:demi@aetherpowerlabs.com" class="nav-link" style="color:#0071e3;">Contact</a>
+                <a href="mailto:demi@aetherpowerlabs.com" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
-
-    <section class="about-hero">
-        <div class="container">
-            <h1>Defining the Future.</h1>
-            <p>At the intersection of optics and energy.</p>
+    <main class="container about-section">
+        <h1>Defining<br>Next-Gen<br>Hardware.</h1>
+        <p>Aether Power Labs is an OEM/ODM powerhouse specialized in high-precision AR optics and resilient energy storage.</p>
+        <div class="vision-grid">
+            <div class="vision-item">
+                <h2>Our Vision</h2>
+                <p>To bridge the gap between digital clarity and physical energy, creating hardware that is as intelligent as it is durable for enterprise scale.</p>
+            </div>
+            <div class="vision-item">
+                <h2>Our Expertise</h2>
+                <p>From diffraction waveguides to 6000-cycle LFP systems, we engineer core components that define future-ready technology.</p>
+            </div>
         </div>
-    </section>
-
-    <section class="container mission-grid">
-        <div class="mission-image">
-            <img src="assets/images/about-vision.jpg" alt="Our Vision">
-        </div>
-        <div class="mission-content">
-            <h2>Our Mission</h2>
-            <p>Aether Power Labs is committed to bridging the gap between digital vision and physical energy storage. We provide industrial-grade OEM/ODM solutions that empower global innovation.</p>
-            <p>Through proprietary waveguide technology and high-cycle LFP systems, we ensure that the next generation of hardware is both intelligent and resilient.</p>
-        </div>
-    </section>
-
-    <section class="stats">
-        <div class="container stats-grid">
-            <div class="stat-item"><h3>2026</h3><p>Innovation Focus</p></div>
-            <div class="stat-item"><h3>6000+</h3><p>LFP Cycle Life</p></div>
-            <div class="stat-item"><h3>85%</h3><p>Optical Transparency</p></div>
-        </div>
-    </section>
-
-    <footer>&copy; 2026 Aether Power Labs. All rights reserved.</footer>
+    </main>
+    <footer>© 2026 Aether Power Labs. All rights reserved.</footer>
 </body>
 </html>
