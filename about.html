@@ -7,23 +7,30 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #fff; color: #1d1d1f; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 40px; }
-        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        
+        /* 统一样式的 Header */
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: #0071e3; }
         
+        /* 导航栏视觉统一：颜色 #86868b, 字号 14px, 粗细 500 */
         .main-nav { display: flex; gap: 40px; align-items: center; }
         .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
         .nav-link:hover { color: #000; }
+        .active-link { color: #000; font-weight: 600; }
 
+        /* 内容区域 */
         .about-section { padding: 140px 0; }
         .about-section h1 { font-size: 80px; letter-spacing: -4px; font-weight: 700; line-height: 0.9; margin-bottom: 48px; color: #000; }
         .about-section p { font-size: 24px; color: #86868b; line-height: 1.5; max-width: 720px; margin-bottom: 80px; font-weight: 400; }
+        
         .vision-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; border-top: 1px solid #eee; padding-top: 80px; }
-        .vision-item h2 { font-size: 28px; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.5px; }
+        .vision-item h2 { font-size: 28px; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.5px; color: #000; }
         .vision-item p { font-size: 17px; color: #424245; line-height: 1.7; }
-        footer { padding: 80px 0; text-align: center; color: #a1a1a6; font-size: 12px; }
+        
+        footer { padding: 80px 0; text-align: center; color: #a1a1a6; font-size: 12px; border-top: 1px solid #f5f5f7; margin-top: 100px; }
     </style>
 </head>
 <body>
@@ -31,26 +38,29 @@
         <div class="container header-flex">
             <a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
             <nav class="main-nav">
-                <a href="about.html" class="nav-link" style="color:#000; font-weight:600;">About Us</a>
-                <a href="/#products-section" class="nav-link">Product</a>
-                <a href="mailto:demi@aetherpowerlabs.com" class="nav-link">Contact</a>
+                <a href="about" class="nav-link active-link">About Us</a>
+                <a href="/#product" class="nav-link">Product</a>
+                <a href="contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
+
     <main class="container about-section">
         <h1>Defining<br>Next-Gen<br>Hardware.</h1>
-        <p>Aether Power Labs is an OEM/ODM powerhouse specialized in high-precision AR optics and resilient energy storage.</p>
+        <p>Aether Power Labs is an OEM/ODM powerhouse specialized in high-precision AR optics and resilient energy storage solutions.</p>
+        
         <div class="vision-grid">
             <div class="vision-item">
                 <h2>Our Vision</h2>
-                <p>To bridge the gap between digital clarity and physical energy, creating hardware that is as intelligent as it is durable for enterprise scale.</p>
+                <p>To bridge the gap between digital clarity and physical energy, creating hardware that is as intelligent as it is durable for global enterprise scales.</p>
             </div>
             <div class="vision-item">
                 <h2>Our Expertise</h2>
-                <p>From diffraction waveguides to 6000-cycle LFP systems, we engineer core components that define future-ready technology.</p>
+                <p>From advanced diffraction waveguides to high-capacity 6000-cycle LFP systems, we provide the core components that define future-ready technology.</p>
             </div>
         </div>
     </main>
+
     <footer>© 2026 Aether Power Labs. All rights reserved.</footer>
 </body>
 </html>
