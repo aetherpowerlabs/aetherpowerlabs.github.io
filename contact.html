@@ -5,39 +5,69 @@
     <title>Contact Us | Aether Power Labs</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* 保持与详情页完全一致的视觉样式 */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #fff; font-family: 'Inter', sans-serif; color: #1d1d1f; }
-        .container { max-width: 800px; margin: 0 auto; padding: 80px 40px; }
-        h1 { font-size: 40px; margin-bottom: 20px; text-align: center; }
-        p { text-align: center; color: #86868b; margin-bottom: 50px; }
-        .contact-form { background: #fbfbfd; padding: 40px; border-radius: 20px; border: 1px solid #d2d2d7; }
+        body { background: #fff; color: #1d1d1f; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); z-index: 100; }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+        .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
+        .logo span { color: #0071e3; }
+        .main-nav { display: flex; gap: 40px; align-items: center; }
+        .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
+        .nav-link:hover { color: #000; }
+
+        /* 留言板表单设计 */
+        .form-container { max-width: 600px; margin: 80px auto; padding: 40px; border: 1px solid #f0f0f0; border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .form-container h1 { font-size: 32px; margin-bottom: 12px; font-weight: 700; text-align: center; }
+        .form-container p { color: #86868b; text-align: center; margin-bottom: 40px; font-size: 15px; }
+        
         .form-group { margin-bottom: 24px; }
-        label { display: block; font-size: 14px; font-weight: 500; margin-bottom: 8px; color: #1d1d1f; }
-        input, textarea { width: 100%; padding: 12px; border: 1px solid #d2d2d7; border-radius: 8px; font-family: inherit; font-size: 16px; }
-        textarea { height: 120px; resize: vertical; }
-        .submit-btn { background: #0071e3; color: #fff; border: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; cursor: pointer; width: 100%; transition: 0.3s; }
-        .submit-btn:hover { background: #0077ed; }
+        .form-group label { display: block; font-size: 13px; color: #86868b; margin-bottom: 8px; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 14px; border: 1px solid #d2d2d7; border-radius: 10px; font-family: 'Inter', sans-serif; font-size: 15px; transition: 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #0071e3; box-shadow: 0 0 0 4px rgba(0,113,227,0.1); }
+        
+        .submit-btn { background: #0071e3; color: #fff; border: none; padding: 16px; border-radius: 12px; font-weight: 600; font-size: 16px; width: 100%; cursor: pointer; transition: 0.3s; margin-top: 10px; }
+        .submit-btn:hover { background: #0077ed; transform: translateY(-1px); }
+
+        footer { padding: 60px 0; text-align: center; color: #86868b; border-top: 1px solid #f5f5f7; font-size: 12px; margin-top: 60px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <p>Leave a message and our team will get back to you within 24 hours.</p>
-        <form class="contact-form">
-            <div class="form-group">
-                <label>Name / Company Name</label>
-                <input type="text" placeholder="Your Name or Company" required>
-            </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="email@example.com" required>
-            </div>
-            <div class="form-group">
-                <label>Requirements</label>
-                <textarea placeholder="Tell us about your needs..."></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-    </div>
+    <header>
+        <div class="container header-flex">
+            <a href="/" class="logo-link"><div class="logo">Aether<span>Power</span> Labs</div></a>
+            <nav class="main-nav">
+                <a href="about" class="nav-link">About Us</a>
+                <a href="/#products-section" class="nav-link">Product</a>
+                <a href="contact" class="nav-link" style="color:#000; font-weight:600;">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h1>Contact Us</h1>
+            <p>Ready to start your next project? Fill out the form below.</p>
+            
+            <form action="https://formspree.io/f/demi@aetherpowerlabs.com" method="POST">
+                <div class="form-group">
+                    <label>Your Name / Company Name</label>
+                    <input type="text" name="name" placeholder="E.g. Demi / Aether Power Labs" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="example@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Requirements</label>
+                    <textarea name="message" rows="5" placeholder="Please describe your needs or specific products..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>© 2026 Aether Power Labs. All rights reserved.</footer>
 </body>
 </html>
