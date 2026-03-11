@@ -7,36 +7,55 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { background: #fff; color: #1d1d1f; font-family: 'Inter', -apple-system, sans-serif; -webkit-font-smoothing: antialiased; }
+        
+        /* 1. 基础容器：确保所有内容都有左右内边距 */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
         
         header { height: 80px; display: flex; align-items: center; border-bottom: 1px solid #f5f5f7; position: sticky; top: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(15px); z-index: 100; }
         .header-flex { display: flex; justify-content: space-between; align-items: center; width: 100%; }
         .logo-link { text-decoration: none; color: #000; font-size: 22px; font-weight: 700; letter-spacing: -0.5px; }
         .logo span { color: #0071e3; }
-        
         .main-nav { display: flex; gap: 40px; align-items: center; }
         .nav-link { color: #86868b; text-decoration: none; font-size: 14px; font-weight: 500; transition: 0.2s; }
         .nav-link:hover { color: #000; }
         .active-link { color: #000; font-weight: 600; }
 
-        /* 内容区域：统一居中处理 */
-        .about-section { padding: 140px 0; display: flex; flex-direction: column; align-items: center; text-align: center; }
-        .about-section h1 { font-size: 80px; letter-spacing: -4px; font-weight: 700; line-height: 0.9; margin-bottom: 48px; color: #000; }
-        .about-section p.hero-text { font-size: 24px; color: #86868b; line-height: 1.5; max-width: 800px; margin-bottom: 80px; }
+        /* 2. 关于页核心样式：使用 Flex 强制所有子元素在纵轴居中 */
+        .about-section { 
+            padding: 100px 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; /* 关键：让所有内容水平居中 */
+            text-align: center; 
+        }
+
+        .about-section h1 { font-size: 64px; letter-spacing: -2px; font-weight: 700; line-height: 1.1; margin-bottom: 40px; color: #000; }
         
-        /* 针对下方 Vision 文字的布局优化 */
+        /* 顶部介绍段落限制宽度 */
+        .hero-text { 
+            font-size: 24px; 
+            color: #86868b; 
+            line-height: 1.5; 
+            max-width: 800px; 
+            margin-bottom: 80px; 
+        }
+        
+        /* 3. 修改重点：Vision Grid 必须限制宽度并左右居中 */
         .vision-grid { 
             display: grid; 
             grid-template-columns: 1fr 1fr; 
-            gap: 80px; 
+            gap: 60px; 
             border-top: 1px solid #eee; 
             padding-top: 80px; 
+            
             width: 100%; 
-            max-width: 1000px; /* 限制底部文字的总宽度，不再铺满全屏 */
-            margin: 0 auto;    /* 确保整个网格居中 */
-            text-align: left;  /* 内部标题和段落保持左对齐以确保专业阅读感 */
+            max-width: 900px;  /* 限制这两块文字的总宽度，不再让它贴边 */
+            margin: 0 auto;     /* 配合上面的宽度限制，实现整体水平居中 */
+            
+            text-align: left;   /* 内部文字保持左对齐，方便阅读 */
         }
-        .vision-item h2 { font-size: 28px; font-weight: 600; margin-bottom: 24px; letter-spacing: -0.5px; color: #000; }
+
+        .vision-item h2 { font-size: 28px; font-weight: 600; margin-bottom: 20px; letter-spacing: -0.5px; color: #000; }
         .vision-item p { font-size: 17px; color: #424245; line-height: 1.7; }
         
         footer { padding: 80px 0; text-align: center; color: #a1a1a6; font-size: 12px; border-top: 1px solid #f5f5f7; margin-top: 100px; }
@@ -55,7 +74,7 @@
     </header>
 
     <main class="container about-section">
-        <h1>Defining<br>Next-Gen<br>Hardware.</h1>
+        <h1>Defining Next-Gen<br>Hardware.</h1>
         <p class="hero-text">Aether Power Labs is an OEM/ODM powerhouse specialized in high-precision AR optics and resilient energy storage solutions.</p>
         
         <div class="vision-grid">
